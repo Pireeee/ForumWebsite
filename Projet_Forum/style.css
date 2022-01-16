@@ -1,0 +1,121 @@
+/*https://palettesdecouleurs.com/palette-de-couleurs-4298/ ref de ma palette de couleur*/
+:root {
+    --main: #7c7b89;
+    --second: #f1e4de;
+    --third:#f4d75e;
+    --fourth:#e9723d;
+    --fith: #0b7fab;
+}
+#modify{ /* pour que le bouton sois visible*/
+    display: block;
+}
+.modify2{ /* pour que le bouton sois invisible de base*/
+    display: none;
+}
+
+body{
+    color: var(--main);
+    background-color: var(--second);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    font-family: 'Poppins', sans-serif;
+}
+h1{
+    border-radius: 2%;
+    font-weight: bold;
+    color: var(--fith);
+}
+h2{
+    color: var(--fith);
+}
+.navbar{
+    background-color: var(--main) ;
+}
+.navbar-dark .navbar-brand,.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link, .navbar-dark .navbar-nav .nav-link{
+    color: var(--third);
+}
+.coms{
+    margin-top: 5%;
+    margin-left: 10%;
+}
+.com{
+    margin-top: 1%;
+    margin-left: 2%;
+}
+textarea , input, button, select{ 
+    border: none;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    border-radius: 6px;
+    border: 0;
+    z-index: 1;
+    background-color: var(--third);
+}
+.modifiable{
+    background-color: var(--second);
+}
+#suppr{ /* pour que les boutons ressemblent au input */
+    cursor: pointer;
+    -webkit-appearance: button;
+    box-shadow: 2px 2px 8px rgba(0 ,0 ,0 ,0.5);
+    border-radius: 6px;
+    border: 0;
+    overflow: visible;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    box-sizing: border-box;
+    background-color: var(--third);
+    color: black;
+    padding: 1px 6px;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+}
+#forme{     /*petit soleil dans le fond qui tourne*/
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    width: 500px;
+    z-index: -1;
+    animation:spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    50% {
+        transform:rotate(-5deg);
+    }
+    50% {
+        transform:rotate(5deg);
+    }
+
+
+}
+.container a{
+    color: var(--fourth);
+}
+table, tr,th { /* tabeaux*/
+    background-color: rgba(11,127,171,0.4);
+    color: var(--second);
+    border: solid rgba(0, 0, 0, 0.4) 1px;
+    padding: 2px;
+}
+.rainbow { /* pour que le pseudo de RAINBOW sois annimé en mulicolor (inutile mais beau)*/
+    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 3s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+
+@keyframes rainbow_animation {
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
